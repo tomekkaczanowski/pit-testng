@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>pl.kaczanowscy.tomek</groupId>
+    <artifactId>pit-testng</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>PIT-TestNG</name>
+    <description>Trying to run PIT with TestNG tests.</description>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>oss-sonatype</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.3.1</version>
+        </dependency>
+    </dependencies>
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.pitest</groupId>
+                <artifactId>pitest-maven</artifactId>
+                <version>0.25-SNAPSHOT</version>
+                <!--
+                <configuration>
+                    <inScopeClasses>
+                        <param>pl.kaczanowscy.tomek.*</param>
+                    </inScopeClasses>
+                    <targetClasses>
+                        <param>pl.kaczanowscy.tomek.mutant</param>
+                    </targetClasses>
+                </configuration>
+                -->
+            </plugin>
+        </plugins>
+    </build>
+</project>
