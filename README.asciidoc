@@ -1,0 +1,10 @@
+== PIT + TestNG
+
+Example of running PIT mutation testing tool (http://pitest.org) against TestNG tests (http://testng.org).
+
+== Usage
+Run it with
+
+  mvn clean install org.pitest:pitest-maven:mutationCoverage
+
+and see the results report in target/pit-reports
